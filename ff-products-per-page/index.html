@@ -3,16 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <title>Products per Page</title>
-    <link rel="stylesheet" href="../demo-styles.css">
 
-    <script>
-        var Polymer = Polymer || {};
-        Polymer.dom = 'shady';
-    </script>
+    <script src="../node_modules/webcomponentsjs/custom-elements-es5-adapter.js"></script>
+    <script src="../node_modules/webcomponentsjs/webcomponents-loader.js"></script>
+    <script src="../node_modules/ff-web-components/dist/bundle.js"></script>
 
-    <script src="../bower_components/webcomponentsjs/webcomponents-lite.min.js"></script>
-    <link rel="import" href="../bower_components/ff-web-components/dist/elements.build_with_dependencies.html">
-    <link rel="import" href="styles.html">
+    <custom-style>
+        <style>
+            ff-products-per-page-item .selected {
+                font-weight: bold;
+            }
+
+            ff-products-per-page-item {
+                --dropdown-item-container: {
+                    transition: height 0.4s;
+                }
+            }
+
+            ff-products-per-page-dropdown:focus {
+                border: 1px solid red;
+            }
+
+            ff-products-per-page-dropdown {
+                border: 1px solid black;
+                --dropdown-item-container: {
+
+                }
+            }
+
+            ff-products-per-page-dropdown[opened] {
+                border: 1px solid black;
+                --dropdown-item-container: {
+                    border: 1px solid black;
+                }
+            }
+
+            .ff-ppp-drowdown-container {
+                border: 1px solid black;
+                --dropdown-item-container: {
+                    border: 1px solid black;
+                }
+            }
+
+            ff-products-per-page-dropdown ff-products-per-page-item {
+                padding: 10px;
+            }
+
+            ff-products-per-page-list {
+                border: 1px solid black;
+                --dropdown-item-container: {
+
+                }
+            }
+
+            ff-products-per-page-list[opened] {
+                border: 1px solid black;
+                --dropdown-item-container: {
+                    border: 1px solid black;
+                }
+            }
+
+            ff-products-per-page-list ff-products-per-page-item {
+                padding: 10px;
+            }
+
+            ff-products-per-page-list .selected {
+                font-weight: bold;
+            }
+
+        </style>
+    </custom-style>
 </head>
 <body>
 <ff-communication url="http://search-web-components.fact-finder.de/FACT-Finder-7.2"
@@ -22,7 +82,7 @@
                   search-immediate>
 </ff-communication>
 
-<input is="ff-searchbox"/>
+
 
 <div>
     <!-- Show the posible values in a simple dropwdown -->
