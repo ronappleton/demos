@@ -68,31 +68,6 @@ div[slot="unselected"] span.filterName:hover {
     text-decoration: underline;
 }
 
-.filterCheckboxUnselected {
-    background-image: url("../../resources/images/sprite-sf85bcdc069.png");
-    background-repeat: no-repeat;
-    background-position: 0 -68px;
-    height: 12px;
-    width: 12px;
-    display: inline-block;
-    margin-right: 6px;
-    position: relative;
-    top: 1px;
-}
-
-.filterCheckboxSelected {
-    background-image: url("../../resources/images/sprite-sf85bcdc069.png");
-    background-repeat: no-repeat;
-    background-position: -13px -41px;
-    height: 12px;
-    width: 12px;
-    content: '';
-    display: block;
-    left: 0;
-    position: absolute;
-    top: 0;
-}
-
 [data-container^="show"] span.text {
     display: inline-block;
     color: #5c5c5c;
