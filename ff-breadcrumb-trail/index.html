@@ -3,17 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <title>Breadcrumb Trail Demo</title>
-    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="../demo-styles.css">
+    <link rel="stylesheet" href="styles.css">
 
-    <script>
-        var Polymer = Polymer || {};
-        Polymer.dom = 'shady';
-    </script>
-    <script src="../bower_components/webcomponentsjs/webcomponents-lite.min.js"></script>
-    <link rel="import" href="../bower_components/ff-web-components/dist/elements.build_with_dependencies.html">
+    <script src="../node_modules/ff-web-components/dist/vendor/custom-elements-es5-adapter.js"></script>
+    <script src="../node_modules/ff-web-components/dist/vendor/webcomponents-loader.js"></script>
+    <script defer src="../node_modules/ff-web-components/dist/bundle.js"></script>
 </head>
-<body unresolved>
+<body>
 <!-- Configure the connection to the FF-Search backend and a default query-->
 <ff-communication url="http://search-web-components.fact-finder.de/FACT-Finder-7.2"
                   version="7.2"
@@ -22,7 +19,13 @@
                   add-params="filterGender=Female"
                   search-immediate>
 </ff-communication>
-<input is="ff-searchbox" label="Search...">
+
+<ff-searchbox>
+    <input label="Search..."/>
+</ff-searchbox>
+<ff-searchbutton>
+    <button>Search</button>
+</ff-searchbutton>
 
 <div class="demo">
     <b>Example 1:</b> You are searching for
